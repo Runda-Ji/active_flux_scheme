@@ -1,0 +1,4 @@
+Anaconda Prompt (Anaconda3)
+D:
+cd D:\01 Fall 2020\Research\20201129_Construct_Basis_Test_Func
+jupyter notebook

@@ -1,0 +1,32 @@
+void FindBasis(int p, double xi, double *phi)
+{
+	double xi2 = xi*xi;
+	double xi3 = xi*xi*xi;
+	double xi4 = xi*xi*xi*xi;
+	double xi5 = xi*xi*xi*xi*xi;
+	double xi6 = xi*xi*xi*xi*xi*xi;
+	switch (p)
+	{
+	case 1: // DG1: uL uM uR
+		phi[0] = $DG1phi0;
+		phi[1] = $DG1phi1;
+		phi[2] = $DG1phi2;
+		break;
+	case 2: // DG2: uL sL uM uR sR
+		phi[0] = $DG2phi0;
+		phi[1] = $DG2phi1;
+		phi[2] = $DG2phi2;
+		phi[3] = $DG2phi3;
+		phi[4] = $DG2phi4;
+		break;
+	case 3: // DG3: uL sL ssL uM uR sR ssR
+		phi[0] = $DG3phi0;
+		phi[1] = $DG3phi1;
+		phi[2] = $DG3phi2;
+		phi[3] = $DG3phi3;
+		phi[4] = $DG3phi4;
+		phi[5] = $DG3phi5;
+		phi[6] = $DG3phi6;
+		break;
+	}
+}

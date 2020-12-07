@@ -1,0 +1,26 @@
+void FindTest(int p, double xi, double *psi)
+{
+	double xi2 = xi*xi;
+	double xi3 = xi*xi*xi;
+	double xi4 = xi*xi*xi*xi;
+	double xi5 = xi*xi*xi*xi*xi;
+	double xi6 = xi*xi*xi*xi*xi*xi;
+	switch (p)
+	{
+	case 1: // DG1: uM uR
+		psi[0] = $DG1psi0;
+		psi[1] = $DG1psi1;
+		break;
+	case 2: // DG2: uM uR sR
+		psi[0] = $DG2psi0;
+		psi[1] = $DG2psi1;
+		psi[2] = $DG2psi2;
+		break;
+	case 3: // DG3: uM uR sR ssR
+		psi[0] = $DG3psi0;
+		psi[1] = $DG3psi1;
+		psi[2] = $DG3psi2;
+		psi[3] = $DG3psi3;
+		break;
+	}
+}

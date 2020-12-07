@@ -1,0 +1,25 @@
+void FindDiffTest(int p, double xi, double *diffpsi)
+{
+	double xi2 = xi*xi;
+	double xi3 = xi*xi*xi;
+	double xi4 = xi*xi*xi*xi;
+	double xi5 = xi*xi*xi*xi*xi;
+	switch (p)
+	{
+	case 1: // DG1: uM uR
+		diffpsi[0] = $DG1diffpsi0;
+		diffpsi[1] = $DG1diffpsi1;
+		break;
+	case 2: // DG2: uM uR sR
+		diffpsi[0] = $DG2diffpsi0;
+		diffpsi[1] = $DG2diffpsi1;
+		diffpsi[2] = $DG2diffpsi2;
+		break;
+	case 3: // DG3: uM uR sR ssR
+		diffpsi[0] = $DG3diffpsi0;
+		diffpsi[1] = $DG3diffpsi1;
+		diffpsi[2] = $DG3diffpsi2;
+		diffpsi[3] = $DG3diffpsi3;
+		break;
+	}
+}
