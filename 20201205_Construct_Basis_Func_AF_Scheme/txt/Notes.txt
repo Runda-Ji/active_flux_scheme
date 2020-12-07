@@ -1,0 +1,4 @@
+Anaconda Prompt (Anaconda3)
+D:
+cd D:\01 Fall 2020\Research\20201205_Construct_Basis_Func (AF Scheme)
+jupyter notebook

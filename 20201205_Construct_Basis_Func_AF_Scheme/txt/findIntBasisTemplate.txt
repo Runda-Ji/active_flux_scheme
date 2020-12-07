@@ -1,0 +1,33 @@
+void FindIntBasis(int p, double xi, double *phi)
+{
+	double xi2 = xi*xi;
+	double xi3 = xi*xi*xi;
+	double xi4 = xi*xi*xi*xi;
+	double xi5 = xi*xi*xi*xi*xi;
+	double xi6 = xi*xi*xi*xi*xi*xi;
+	double xi7 = xi*xi*xi*xi*xi*xi*xi;
+	switch (p)
+	{
+	case 3: // AF3: uL uM uR
+		phi[0] = $AF3phi0;
+		phi[1] = $AF3phi1;
+		phi[2] = $AF3phi2;
+		break;
+	case 5: // AF5: uL sL uM uR sR
+		phi[0] = $AF5phi0;
+		phi[1] = $AF5phi1;
+		phi[2] = $AF5phi2;
+		phi[3] = $AF5phi3;
+		phi[4] = $AF5phi4;
+		break;
+	case 7: // AF7: uL sL ssL uM uR sR ssR
+		phi[0] = $AF7phi0;
+		phi[1] = $AF7phi1;
+		phi[2] = $AF7phi2;
+		phi[3] = $AF7phi3;
+		phi[4] = $AF7phi4;
+		phi[5] = $AF7phi5;
+		phi[6] = $AF7phi6;
+		break;
+	}
+}
